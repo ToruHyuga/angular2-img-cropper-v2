@@ -1,0 +1,20 @@
+
+# Node generated files
+node_modules
+npm-debug.log
+# OS generated files
+Thumbs.db
+.DS_Store
+.idea
+!/**/*.ts
+!/**/*.d.ts
+runtime
+typings
+/system.config.js
+/typings.json
+*.ngFactory.ts
+/tsconfig.json
+/index.html
+/.npmignore
+/make.js
+dist

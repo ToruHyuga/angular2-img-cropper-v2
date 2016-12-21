@@ -1,0 +1,62 @@
+{
+  "name": "ng2-img-cropper",
+  "version": "0.7.6",
+  "description": "Angular2 Image Cropper Component",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cstefanache/angular2-img-cropper.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "build": "tsc -p ./",
+    "preversion": "npm test && npm run build",
+    "version": "git commit -am \"Prerelease updates\" && git checkout -b release && git add -f ./",
+    "postversion": "git push --tags && git checkout master && git branch -D release && git push && npm publish",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "compile": "npm run compile:ts",
+    "compile:ts": "tsc",
+    "all": "concurrently \"tsc -w \" \"tsc -p runtime -w \" \"npm run lite\" ",
+    "start": "concurrently \"tsc -w \" \"tsc -p runtime -w \" \"npm run lite\" ",
+    "watch": "tsc -w ",
+    "lite": "lite-server"
+  },
+  "keywords": [
+    "angular2", "image", "cropper"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^2.1.0",
+    "@angular/compiler": "^2.1.0",
+    "@angular/core": "^2.1.0"
+  },
+  "devDependencies": {
+    "@angular/common": "~2.3.0",
+    "@angular/compiler": "~2.3.0",
+    "@angular/core": "~2.3.0",
+    "@angular/forms": "~2.3.0",
+    "@angular/http": "~2.3.0",
+    "@angular/platform-browser": "~2.3.0",
+    "@angular/platform-browser-dynamic": "~2.3.0",
+    "@types/es6-shim": "^0.31.32",
+    "angular-in-memory-web-api": "~0.1.17",
+    "concurrently": "^2.2.0",
+    "core-js": "^2.4.1",
+    "es6-shim": "^0.35.1",
+    "lite-server": "^2.2.2",
+    "ng2-tabs": "0.0.7",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-rc.4",
+    "zone.js": "^0.7.2",
+    "systemjs": "0.19.27",
+    "typescript": "^2.0.2",
+    "typings": "^1.3.2",
+    "version": "^0.1.2"
+  },
+  "bugs": {
+    "url": "https://github.com/cstefanache/angular2-img-cropper/issues"
+  },
+  "homepage": "https://github.com/cstefanache/angular2-img-cropper#readme",
+  "author": "Cornel Stefanache"
+}
