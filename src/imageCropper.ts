@@ -210,11 +210,13 @@ export class ImageCropper extends ImageCropperModel {
                     Math.max(bounds.height, 1), bounds.left, bounds.top, bounds.width, bounds.height);
                 ctx.strokeRect(bounds.left, bounds.top, bounds.width, bounds.height);*/
                 
-                ctx.fillStyle = "rgba(25, 25, 27,0.5)";
+                ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
                 ctx.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
                 ctx.drawImage(this.buffer, bounds.left, bounds.top, Math.max(bounds.width, 1), Math.max(bounds.height, 1), bounds.left, bounds.top, bounds.width, bounds.height);
         
                 ctx.beginPath();
+        
+                ctx.strokeRect(bounds.left, bounds.top, bounds.width, bounds.height);
         
                 ctx.moveTo(bounds.left + (bounds.width / 3), bounds.top);
                 ctx.lineTo(bounds.left + (bounds.width / 3), bounds.bottom);
