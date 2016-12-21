@@ -61,7 +61,7 @@ var DragMarker = (function (_super) {
             ctx.lineTo(p.x + this.position.x, p.y + this.position.y);
         }
         ctx.closePath();
-        ctx.fillStyle = this.cropperSettings.cropperDrawSettings.strokeColor;
+        ctx.fillStyle = 'rgba(0,0,0,0)';
         ctx.fill();
     };
     DragMarker.prototype.recalculatePosition = function (bounds) {

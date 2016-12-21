@@ -16,9 +16,9 @@ export class CornerMarker extends Handle implements ICornerMarker {
     }
 
     public drawCornerBorder(ctx: CanvasRenderingContext2D): void {
-        let sideLength: number = 10;
+        let sideLength: number = 6;
         if (this.over || this.drag) {
-            sideLength = 12;
+            sideLength = 6;
         }
 
         let hDirection: number = 1;
