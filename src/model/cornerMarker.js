@@ -45,7 +45,7 @@ var CornerMarker = (function (_super) {
         ctx.lineTo(this.position.x + this.offset.x, this.position.y + this.offset.y);
         ctx.closePath();
         ctx.lineWidth = this.cropperSettings.cropperDrawSettings.strokeWidth;
-        ctx.strokeStyle = this.cropperSettings.cropperDrawSettings.strokeColor;
+        ctx.strokeStyle = 'rgba(0,0,0,0)';
         ctx.stroke();
     };
     CornerMarker.prototype.drawCornerFill = function (ctx, i) {
@@ -147,6 +147,7 @@ var CornerMarker = (function (_super) {
     };
     CornerMarker.prototype.draw = function (ctx, i) {
         this.drawCornerFill(ctx, i);
+        this.drawCornerBorder(ctx);
     };
     return CornerMarker;
 }(handle_1.Handle));
