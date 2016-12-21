@@ -49,9 +49,9 @@ var CornerMarker = (function (_super) {
         ctx.stroke();
     };
     CornerMarker.prototype.drawCornerFill = function (ctx, i) {
-        var sideLength = 10;
+        var sideLength = 6;
         if (this.over || this.drag) {
-            sideLength = 12;
+            sideLength = 6;
         }
         var hDirection = 1;
         var vDirection = 1;
