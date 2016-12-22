@@ -233,6 +233,10 @@ var ImageCropper = (function (_super) {
         this.tr.moveX(x + (bounds.width / 2));
         this.bl.moveX(x - (bounds.width / 2));
         this.br.moveX(x + (bounds.width / 2));
+        this.tl.moveY(y + (bounds.height / 2));
+        this.tr.moveY(y + (bounds.height / 2));
+        this.bl.moveY(y - (bounds.height / 2));
+        this.br.moveY(y - (bounds.height / 2));
         marker.setPosition(x, y);
     };
     ImageCropper.prototype.enforceMinSize = function (x, y, marker) {

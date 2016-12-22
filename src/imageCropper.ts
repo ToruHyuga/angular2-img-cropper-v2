@@ -283,6 +283,11 @@ export class ImageCropper extends ImageCropperModel {
         this.tr.moveX(x + (bounds.width / 2));
         this.bl.moveX(x - (bounds.width / 2));
         this.br.moveX(x + (bounds.width / 2));
+        
+        this.tl.moveY(y + (bounds.height / 2));
+        this.tr.moveY(y + (bounds.height / 2));
+        this.bl.moveY(y - (bounds.height / 2));
+        this.br.moveY(y - (bounds.height / 2));
         marker.setPosition(x, y);
     }
 
