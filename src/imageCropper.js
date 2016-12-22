@@ -176,7 +176,7 @@ var ImageCropper = (function (_super) {
             }
             this.buffer.getContext("2d").drawImage(this.canvas, 0, 0, this.canvasWidth, this.canvasHeight);
             ctx.lineWidth = this.cropperSettings.cropperDrawSettings.strokeWidth;
-            ctx.strokeStyle = this.cropperSettings.cropperDrawSettings.strokeColor;
+            ctx.strokeStyle = "rgba(25, 25, 27, 0.5)";
             if (!this.cropperSettings.rounded) {
                 ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
                 ctx.fillRect(0, 0, this.canvasWidth, this.canvasHeight);

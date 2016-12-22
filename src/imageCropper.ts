@@ -201,7 +201,7 @@ export class ImageCropper extends ImageCropperModel {
             this.buffer.getContext("2d").drawImage(this.canvas, 0, 0, this.canvasWidth, this.canvasHeight);
 
             ctx.lineWidth = this.cropperSettings.cropperDrawSettings.strokeWidth;
-            ctx.strokeStyle = this.cropperSettings.cropperDrawSettings.strokeColor; // "rgba(255,228,0,1)";
+            ctx.strokeStyle = "rgba(25, 25, 27, 0.5)" // "rgba(255,228,0,1)";
 
             if (!this.cropperSettings.rounded) {
                /* ctx.fillStyle = "rgba(0, 0, 0, 0.6)";
