@@ -17,6 +17,7 @@ export interface ICropperSettings {
     rounded: boolean;
     keepAspect: boolean;
     preserveSize: boolean;
+    dragRadius: number;
 }
 
 export class CropperSettings implements ICropperSettings {
@@ -39,6 +40,8 @@ export class CropperSettings implements ICropperSettings {
     public cropperDrawSettings: CropperDrawSettings = new CropperDrawSettings();
     public touchRadius: number = 20;
     public noFileInput: boolean = false;
+    
+    public dragRadius: number = 200;
 
     public fileType:string = "png";
 
