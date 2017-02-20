@@ -25,6 +25,7 @@ var ImageCropper = (function (_super) {
         var minHeight = cropperSettings.minHeight;
         var croppedWidth = cropperSettings.croppedWidth;
         var croppedHeight = cropperSettings.croppedHeight;
+        var dragRaduis = cropperSettings.dragRaduis;
         this.cropperSettings = cropperSettings;
         this.crop = this;
         this.x = x;
@@ -65,7 +66,7 @@ var ImageCropper = (function (_super) {
         this.br.addHorizontalNeighbour(this.bl);
         this.br.addVerticalNeighbour(this.tr);
         this.markers = [this.tl, this.tr, this.bl, this.br];
-        this.center = new dragMarker_1.DragMarker(x + (width / 2), y + (height / 2), touchRadius, this.cropperSettings);
+        this.center = new dragMarker_1.DragMarker(x + (width / 2), y + (height / 2), dragRaduis, this.cropperSettings);
         this.keepAspect = keepAspect;
         this.aspectRatio = height / width;
         this.croppedImage = new Image();
